@@ -9,6 +9,12 @@ $h2-size: 22px;
 body {
     text-align: center;
     font-size: 16px;
+    background-color: black;
+    max-width: 600px;
+    margin: 0 auto;
+}
+section {
+    background-color: #fff;
 }
 
 p {
@@ -23,6 +29,7 @@ section h2 {
 #title {
     // background-color: #ECC5BB;
     height: 100vh;
+    position: relative;
 
     header {
         height: 20vh;
@@ -63,6 +70,17 @@ section h2 {
             }
         }
     }
+
+    video {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        // 블랜딩: 이미지 합성기능(포토샵 블랜딩 모드 참고)
+        mix-blend-mode: lighten;
+    }
 }
 
 #intro {
@@ -86,7 +104,11 @@ section h2 {
     b {
         color: $main-color;
     }
-    h2 { margin-bottom: 10px; }
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
     .invit-text {
         margin-bottom: 50px;
     }
@@ -121,6 +143,7 @@ section h2 {
         align-items: center;
         color: $text-color-mid;
         font-family: 'Noto Sans KR', sans-serif;
+
         span {
             margin-left: 10px;
         }
@@ -167,6 +190,7 @@ section h2 {
             }
         }
     }
+
     .time-info {
         margin: 30px 0 10px;
         // .day-box::after {
@@ -174,26 +198,49 @@ section h2 {
         // }        
         display: flex;
         justify-content: center;
+        align-items: center;
+        span {
+            display: block;
+            padding-bottom: 10px;
+        }
+        .day-box {
+            padding: 0 15px;
+        }
+        .hour-box {
+            padding: 0 15px;
+        }
+        .min-box {
+            padding: 0 15px;
+        }
+        .sec-box {
+            padding: 0 15px;
+        }
     }
+
     .day-text {
         color: $main-color;
     }
 }
+
 #gallery {
     padding: 80px 15px;
+
     h2 {
         margin-bottom: 20px;
     }
-    ul{
+
+    ul {
         display: flex;
         flex-wrap: wrap;
         gap: 5px 4px;
+
         li {
             $단수: 3;
             width: calc((100% - 8px) / $단수);
+
             // width: calc((100% - 8px) / 3);
             img {
-                width: 100%;  
+                width: 100%;
                 aspect-ratio: 1/1;
                 object-fit: cover;
                 display: block;
@@ -201,32 +248,41 @@ section h2 {
         }
     }
 }
+
 #location {
     padding: 0 15px;
+
     h2 {
         font-weight: 700;
         margin-bottom: 20px;
     }
+
     address {
         font-style: normal;
+
         b {
             padding-bottom: 10px;
             display: inline-block;
         }
+
         span {
             color: #666;
         }
+
         iframe {
             margin-top: 20px;
         }
+
         dl {
             text-align: left;
+
             dt {
                 font-weight: 700;
                 padding-bottom: 10px;
-            margin-top: 30px;
+                margin-top: 30px;
 
             }
+
             dd {
                 font-size: 14px;
                 color: #444;
@@ -235,11 +291,14 @@ section h2 {
         }
     }
 }
+
 #congra {
     padding: 80px 15px 40px;
+
     h2 {
         margin-bottom: 20px;
     }
+
     h3 {
         background-color: #ededed;
         padding: 8px 10px;
