@@ -57,8 +57,18 @@ section h2 {
 }
 #title .photo {
   height: 52vh;
+  position: relative;
 }
 #title .photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#title .photo .title_anim {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -77,16 +87,6 @@ section h2 {
 }
 #title .bottom h1 span {
   font-weight: 400;
-}
-#title video {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-  mix-blend-mode: lighten;
 }
 
 #intro {
@@ -247,16 +247,52 @@ section h2 {
 }
 #location address dl {
   text-align: left;
+  margin-top: 30px;
 }
 #location address dl dt {
   font-weight: 700;
-  padding-bottom: 10px;
+  padding-bottom: 0.6em;
   margin-top: 30px;
 }
 #location address dl dd {
   font-size: 14px;
   color: #444;
   line-height: 20px;
+  padding-bottom: 0.4em;
+}
+
+#guide {
+  padding: 86px 15px 0 15px;
+}
+#guide h2 {
+  padding-bottom: 20px;
+}
+#guide .tab-group {
+  display: flex;
+}
+#guide .tab-group a {
+  width: 50%;
+  padding: 5px;
+  color: #000;
+  border: 1px solid #ECF0F1;
+  border-radius: 6px 6px 0 0;
+  background-color: #ECF0F1;
+  border-bottom: none;
+}
+#guide .tab-group a.active {
+  background-color: #fff;
+}
+#guide .tab-contents {
+  padding: 33px 14px;
+  border-left: 1px solid #ECF0F1;
+  border-bottom: 1px solid #ECF0F1;
+  border-right: 1px solid #ECF0F1;
+}
+#guide .tab-contents .content {
+  display: none;
+}
+#guide .tab-contents .content.active {
+  display: block;
 }
 
 #congra {
@@ -269,4 +305,10 @@ section h2 {
   background-color: #ededed;
   padding: 8px 10px;
   margin-bottom: 10px;
+}
+#congra .bank-number-box1 .info-box span {
+  display: block;
+}
+#congra .bank-number-box2 .info-box span {
+  display: block;
 }/*# sourceMappingURL=style.css.map */

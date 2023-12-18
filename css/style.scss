@@ -13,6 +13,7 @@ body {
     max-width: 600px;
     margin: 0 auto;
 }
+
 section {
     background-color: #fff;
 }
@@ -31,6 +32,17 @@ section h2 {
     height: 100vh;
     position: relative;
 
+    // video {
+    //     position: absolute;
+    //     left: 0;
+    //     top: 0;
+    //     width: 100%;
+    //     height: 100vh;
+    //     object-fit: cover;
+    //     // 블랜딩: 이미지 합성기능(포토샵 블랜딩 모드 참고)
+    //     // mix-blend-mode: lighten;
+    // }
+
     header {
         height: 20vh;
         display: flex;
@@ -46,11 +58,23 @@ section h2 {
 
     .photo {
         height: 52vh;
+        position: relative;
 
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        .title_anim {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            // 블랜딩: 이미지 합성기능(포토샵 블랜딩 모드 참고)
+            // mix-blend-mode: lighten;
         }
     }
 
@@ -71,16 +95,6 @@ section h2 {
         }
     }
 
-    video {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-        // 블랜딩: 이미지 합성기능(포토샵 블랜딩 모드 참고)
-        mix-blend-mode: lighten;
-    }
 }
 
 #intro {
@@ -199,19 +213,24 @@ section h2 {
         display: flex;
         justify-content: center;
         align-items: center;
+
         span {
             display: block;
             padding-bottom: 10px;
         }
+
         .day-box {
             padding: 0 15px;
         }
+
         .hour-box {
             padding: 0 15px;
         }
+
         .min-box {
             padding: 0 15px;
         }
+
         .sec-box {
             padding: 0 15px;
         }
@@ -275,18 +294,58 @@ section h2 {
 
         dl {
             text-align: left;
+            margin-top: 30px;
 
             dt {
                 font-weight: 700;
-                padding-bottom: 10px;
+                padding-bottom: 0.6em;
                 margin-top: 30px;
-
             }
 
             dd {
                 font-size: 14px;
                 color: #444;
                 line-height: 20px;
+                padding-bottom: 0.4em;
+            }
+        }
+    }
+}
+
+#guide {
+    padding: 86px 15px 0 15px;
+
+    h2 {
+        padding-bottom: 20px;
+    }
+
+    .tab-group {
+        display: flex;
+
+        a {
+            width: 50%;
+            padding: 5px;
+            color: #000;
+            border: 1px solid #ECF0F1;
+            border-radius: 6px 6px 0 0;
+            background-color: #ECF0F1;
+            border-bottom: none;
+            &.active {
+                background-color: #fff;
+            }
+        }       
+    }
+
+    .tab-contents {
+        padding: 33px 14px;
+        border-left: 1px solid #ECF0F1;
+        border-bottom: 1px solid #ECF0F1;
+        border-right: 1px solid #ECF0F1;
+        .content {
+            display: none;
+            &.active {
+                display: block;
+                // active일때 콘텐츠 보임
             }
         }
     }
@@ -303,5 +362,21 @@ section h2 {
         background-color: #ededed;
         padding: 8px 10px;
         margin-bottom: 10px;
+    }
+
+    .bank-number-box1 {
+        .info-box {
+            span {
+                display: block;
+            }
+        }
+    }
+
+    .bank-number-box2 {
+        .info-box {
+            span {
+                display: block;
+            }
+        }
     }
 }
